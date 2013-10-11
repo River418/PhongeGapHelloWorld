@@ -6,5 +6,8 @@ var HelloWorldPlugin = {
 	   'HelloWorldPlugin',//Java端的插件名称
 	   'hello',//Action名称
 	   [name]);//传递给java端的参数
+	},
+	getBookDetailData:function(successCallback,errorCallback){
+		cordova.exec(successCallback,errorCallback,'HttpBookDetailPlugin','get',[]);
 	}
 }
